@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>மருத்துவத் திட்ட வழிகாட்டி | Health Scheme Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#f1f8f6;--card:#fff;--ink:#10322e;--mute:#4d6b66;--line:#cde2de;--brand:#0b6b66;--on:#fff;--hot:#d94a22;--tn:#0b6b66;--tnbg:#d9f0ec;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1f1d;--card:#13302c;--ink:#e9f6f3;--mute:#9dbcb6;--line:#24473f;--brand:#5fd3c6;--on:#0c1f1d;--hot:#ff8a65;--tn:#5fd3c6;--tnbg:#17403a}}
+:root[data-theme="dark"]{--bg:#0c1f1d;--card:#13302c;--ink:#e9f6f3;--mute:#9dbcb6;--line:#24473f;--brand:#5fd3c6;--on:#0c1f1d;--hot:#ff8a65;--tn:#5fd3c6;--tnbg:#17403a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Hind Madurai","Noto Sans Tamil","Latha",system-ui,sans-serif}
+.sos{background:var(--hot);color:#fff;text-align:center;padding:10px 16px;font-weight:700;font-size:18px}
+.sos a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 40px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.mark{font-weight:700;color:var(--mute);font-size:15px}
+.lang{display:flex;border:2px solid var(--brand);border-radius:99px;overflow:hidden}
+.lang button{border:0;background:none;color:var(--brand);font:600 15px inherit;font-family:inherit;padding:6px 16px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--brand);color:var(--on)}
+h1{font-size:clamp(30px,6vw,46px);line-height:1.2;margin:28px 0 8px;font-weight:700}
+.sub{color:var(--mute);margin:0 0 24px;max-width:60ch}
+.picker{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:10px;padding:18px;display:grid;gap:16px}
+fieldset{border:0;margin:0;padding:0}
+legend{font-weight:700;margin-bottom:8px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{border:1.5px solid var(--line);border-radius:99px;padding:6px 15px;cursor:pointer;background:var(--bg);font-size:16px}
+.chips input:checked+label{background:var(--brand);color:var(--on);border-color:var(--brand);font-weight:600}
+.chips input:focus-visible+label,.lang button:focus-visible,.go:focus-visible{outline:3px solid var(--hot);outline-offset:2px}
+#count{margin:28px 0 12px;font-weight:700;font-size:20px}
+.list{display:grid;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.card h2{font-size:20px;line-height:1.35;margin:0 0 6px}
+.badge{display:inline-block;background:var(--tnbg);color:var(--tn);font-size:14px;font-weight:600;padding:1px 10px;border-radius:99px;margin-bottom:8px}
+.who{margin:0 0 6px;font-weight:600}
+.card p{margin:0 0 8px}
+.how{color:var(--mute)}
+.go{display:inline-block;margin-top:6px;background:var(--brand);color:var(--on);text-decoration:none;font-weight:600;padding:8px 18px;border-radius:8px}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:18px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}.tabs button,.btn{font-family:inherit;font-size:16px;font-weight:600;border:1.5px solid var(--brand);background:none;color:var(--brand);border-radius:99px;padding:6px 16px;cursor:pointer}.tabs button[aria-selected=true],.btn{background:var(--brand);color:var(--on)}.btn{border-radius:8px;padding:8px 18px}.btn.alt{background:none;color:var(--brand)}.tabs button:focus-visible,.btn:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--hot);outline-offset:2px}.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}label.f{display:grid;gap:4px;font-weight:600}input,select{font:inherit;padding:8px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}.vx{list-style:none;padding:0;margin:8px 0 12px;display:grid;gap:8px}.vx li{display:flex;gap:10px;align-items:flex-start}.vx input{width:auto;margin-top:7px}.due{color:var(--hot);font-weight:600}.note{background:var(--tnbg);border-radius:8px;padding:10px 14px}h2.sec{font-size:22px;margin:24px 0 10px}
+footer{margin-top:32px;color:var(--mute);font-size:15px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="sos" id="sos"></div>
+<div class="wrap">
+<div class="top"><span class="mark" id="mark"></span>
+<div class="lang" role="group" aria-label="Language"><button id="bta" aria-pressed="true">தமிழ்</button><button id="ben" aria-pressed="false">English</button></div></div>
+<nav class="tabs" id="tabs"></nav><div id="v-find"><h1 id="h1"></h1>
+<p class="sub" id="sub"></p>
+<div class="picker">
+<fieldset><legend id="l1"></legend><div class="chips" id="c1"></div></fieldset>
+<fieldset><legend id="l2"></legend><div class="chips" id="c2"></div></fieldset>
+<fieldset><legend id="l3"></legend><div class="chips" id="c3"></div></fieldset>
+</div>
+<div id="count" aria-live="polite"></div>
+<div class="list" id="list"></div></div><div id="v-card" hidden></div><div id="v-vax" hidden></div>
+<footer id="foot"></footer>
+</div>
+<script>
+var T={
+ta:{sos:'அவசரமா? <a href="tel:108">108</a> ஐ அழைத்தால் இலவச ஆம்புலன்ஸ் வரும்',mark:"சேவா ஃபர்ஸ்ட் புத்தாக்கப் போட்டி",h1:"உங்களுக்கான மருத்துவ உதவித் திட்டங்கள்",sub:"உங்கள் தேவையைத் தேர்ந்தெடுங்கள். பொருந்தும் அரசு மருத்துவக் காப்பீடு, இலவச சிகிச்சை, நிதியுதவித் திட்டங்களையும் விண்ணப்பிக்கும் வழியையும் உடனே பாருங்கள்.",
+l1:"எந்தப் பகுதி?",l2:"என்ன உதவி தேவை?",l3:"குடும்ப ஆண்டு வருமானம்",cnt:function(n){return "உங்களுக்கான "+n+" திட்டங்கள்"},go:"அதிகாரப்பூர்வ தளத்தைத் திறக்க",tn:"தமிழ்நாடு",who:"யாருக்கு: ",empty:"இந்தத் தேர்வுக்குப் பொருந்தும் திட்டம் இல்லை. வேறு தேவையைத் தேர்ந்தெடுங்கள் அல்லது வருமானத்தில் “தெரியாது” என்பதைத் தேர்ந்தெடுங்கள்.",
+foot:"Developed by: Akalya A, Harini S, Madhu Bharathi E, Sukitha M, Thenmozhi A<br><br>இது பொதுத் தகவலின் அடிப்படையிலான வழிகாட்டி மட்டுமே. தொகைகள், வருமான வரம்புகள், விதிகள் மாறக்கூடும்; விண்ணப்பிக்கும் முன் அதிகாரப்பூர்வ இணையதளத்தில் அல்லது உங்கள் சுகாதார நிலையத்தில் உறுதிசெய்யுங்கள். அவசரத்தில் 108 ஐ அழைக்கவும்.",
+reg:["தமிழ்நாடு","இந்தியா முழுவதும்"],sit:["குடும்பத்துக்கு மருத்துவமனைச் சிகிச்சை","கர்ப்பம் / புதிய தாய்","மூத்த குடிமக்கள்","சாலை விபத்து / அவசரம்","மாற்றுத்திறனாளி","நீரிழிவு, இரத்த அழுத்தம், நீண்டகால நோய்"],inc:["₹1.2 லட்சம் வரை","₹1.2 லட்சத்துக்கு மேல்","தெரியாது"]},
+en:{sos:'Emergency? Call <a href="tel:108">108</a> for a free ambulance',mark:"Seva First Innovation Challenge",h1:"Health schemes made for you",sub:"Choose what you need. See the government health insurance, free treatment and financial aid schemes that fit, and how to apply.",
+l1:"Which region?",l2:"What do you need help with?",l3:"Yearly family income",cnt:function(n){return n+(n==1?" scheme":" schemes")+" for you"},go:"Open official site",tn:"Tamil Nadu",who:"Who: ",empty:"No scheme matched this choice. Try another need, or choose “Not sure” for income.",
+foot:"Developed by: Akalya A, Harini S, Madhu Bharathi E, Sukitha M, Thenmozhi A<br><br>This is general guidance based on public information. Amounts, income limits and rules change, so confirm on the official website or at your health centre before applying. In an emergency, call 108.",
+reg:["Tamil Nadu","All India"],sit:["Hospital treatment for my family","Pregnancy / new mother","Senior citizen","Road accident / emergency","Person with disability","Diabetes, BP or long-term illness"],inc:["Up to ₹1.2 lakh","Above ₹1.2 lakh","Not sure"]}};
+var P=[
+{tn:1,inc:1,dis:1,s:[0,2,4,5],l:"https://www.cmchistn.com",
+ta:["முதலமைச்சரின் விரிவான மருத்துவக் காப்பீட்டுத் திட்டம் (CMCHIS)","ஆண்டு வருமானம் ₹1.2 லட்சம் வரை உள்ள, குடும்ப அட்டை உள்ள தமிழ்நாட்டுக் குடும்பங்கள். மாற்றுத்திறனாளி உறுப்பினர் உள்ள குடும்பங்கள் வருமான வரம்பின்றிச் சேரலாம்.","அங்கீகரிக்கப்பட்ட அரசு மற்றும் தனியார் மருத்துவமனைகளில் குடும்பம் முழுவதற்கும் பணமில்லா சிகிச்சை. ஆண்டுக்கு ₹5 லட்சம் காப்பீடு. 2026 ஆகஸ்டில் இது ₹25 லட்சமாக உயர்த்தப்படும் என்று அறிவிக்கப்பட்டது; எப்போது நடைமுறைக்கு வரும் என்று உறுதிசெய்யுங்கள்.","கிராம நிர்வாக அலுவலரிடம் வருமானச் சான்று பெறுங்கள். குடும்ப அட்டை, ஆதார் தயாராக வைத்து, மாவட்ட ஆட்சியர் அலுவலகத்தில் உள்ள அட்டை வழங்கும் மையத்தில் சேருங்கள். உதவி எண்: 1800 425 3993."],
+en:["CM’s Comprehensive Health Insurance Scheme (CMCHIS)","Tamil Nadu families with annual income up to ₹1.2 lakh and a family ration card. Families with a differently abled member can enrol without the income limit.","Cashless treatment for the whole family at empanelled government and private hospitals. Cover is ₹5 lakh per family per year. In August 2026 the state announced a rise to ₹25 lakh; check when it takes effect.","Get an income certificate from the Village Administrative Officer, keep your family ration card and Aadhaar ready, and enrol at the card centre in the District Collector’s office. Helpline: 1800 425 3993."]},
+{inc:1,s:[0,2,4,5],l:"https://pmjay.gov.in",
+ta:["ஆயுஷ்மான் பாரத் பிஎம்-ஜேஏஒய்","SECC 2011 அளவுகோலில் அடையாளம் காணப்பட்ட ஏழை மற்றும் பாதிக்கப்படக்கூடிய குடும்பங்கள்","அங்கீகரிக்கப்பட்ட மருத்துவமனைகளில் ஆண்டுக்கு குடும்பத்துக்கு ₹5 லட்சம் வரை பணமில்லா சிகிச்சை. குடும்ப உறுப்பினர் அனைவரும் பகிர்ந்து பயன்படுத்தலாம்.","pmjay.gov.in அல்லது ஆயுஷ்மான் செயலியில் தகுதியைச் சரிபார்த்து, ஆதார் e-KYC முடித்து அட்டையைப் பதிவிறக்குங்கள்."],
+en:["Ayushman Bharat PM-JAY","Poor and vulnerable families identified under the SECC 2011 criteria","Cashless hospital treatment up to ₹5 lakh per family per year at empanelled hospitals, shared by all family members.","Check your eligibility on pmjay.gov.in or the Ayushman app, complete Aadhaar e-KYC and download your card."]},
+{s:[2],l:"https://pmjay.gov.in",
+ta:["ஆயுஷ்மான் வய வந்தனா அட்டை (70 வயதும் அதற்கு மேலும்)","70 வயது அல்லது அதற்கு மேற்பட்ட அனைத்து மூத்த குடிமக்கள்; வருமானம் தடையில்லை","ஆண்டுக்கு ₹5 லட்சம் வரை இலவச மருத்துவமனைச் சிகிச்சை. ஏற்கெனவே பிஎம்-ஜேஏஒய் குடும்பத்தில் உள்ள மூத்தவர்களுக்குத் தனியாக கூடுதல் ₹5 லட்சம் கிடைக்கும்.","வயது ஆதாரிலிருந்து சரிபார்க்கப்படும். pmjay.gov.in இல் அல்லது அருகிலுள்ள பொது சேவை மையத்தில் விண்ணப்பிக்கலாம்."],
+en:["Ayushman Vay Vandana Card (70 and above)","Every senior citizen aged 70 or above, whatever the income","Free hospital treatment up to ₹5 lakh a year. Seniors in families already under PM-JAY get an extra ₹5 lakh just for themselves.","Age is checked from Aadhaar. Apply on pmjay.gov.in or through a nearby Common Service Centre."]},
+{tn:1,s:[3],l:null,
+ta:["இன்னுயிர் காப்போம் – நம்மைக் காக்கும் 48 (சாலை விபத்து)","தமிழ்நாட்டில் சாலை விபத்தில் காயமடைந்த எவரும்; பிற மாநிலத்தவர் உட்பட","அங்கீகரிக்கப்பட்ட மருத்துவமனைகளில் முதல் 48 மணி நேரத்துக்கு உயிர்காக்கும் சிகிச்சை இலவசம். வரம்பு ₹1 லட்சமாக இருந்தது; பின்னர் ₹2 லட்சமாக உயர்த்தப்பட்டது.","தனியாக விண்ணப்பிக்க வேண்டியதில்லை என்று தெரிவிக்கப்படுகிறது. காயமடைந்தவரை அருகிலுள்ள அங்கீகரிக்கப்பட்ட மருத்துவமனைக்குக் கொண்டு சென்று, சாலை விபத்து என்று சொல்லுங்கள். தொடர் சிகிச்சை CMCHIS உடன் இணைக்கப்படும்."],
+en:["Innuyir Kaappom – Nammai Kaakkum 48 (road accidents)","Anyone injured in a road accident in Tamil Nadu, including people from other states","Free life-saving treatment in the first 48 hours at empanelled hospitals. The limit was ₹1 lakh and has since been raised to ₹2 lakh.","No separate application is reported. Take the injured person to the nearest empanelled hospital and say it is a road accident. Further treatment is linked to CMCHIS."]},
+{tn:1,s:[5,2],l:null,
+ta:["மக்களைத் தேடி மருத்துவம் (வீடு தேடி வரும் சுகாதாரச் சேவை)","உயர் இரத்த அழுத்தம் அல்லது நீரிழிவு உள்ளவர்கள்; வீட்டில் பராமரிப்பு தேவைப்படுவோர்","பெண் சுகாதாரத் தன்னார்வலர்கள் வீடுகளுக்கு வந்து (30 வயதுக்கு மேற்பட்டோருக்கு) இரத்த அழுத்தம், நீரிழிவுப் பரிசோதனை செய்து, வழக்கமான மருந்துகளை வழங்குகிறார்கள். பட்டியலில் உள்ள நோயாளிகளுக்கு வீட்டு பிசியோதெரபி, நோய்த்தணிப்புப் பராமரிப்பு, வீட்டு டயாலிசிஸ் ஆகியவையும் உண்டு.","விண்ணப்பம் தேவையில்லை. உங்கள் பகுதி பெண் சுகாதாரத் தன்னார்வலரிடம் கேளுங்கள் அல்லது அருகிலுள்ள துணை சுகாதார நிலையம் / ஆரம்ப சுகாதார நிலையத்துக்குச் செல்லுங்கள்."],
+en:["Makkalai Thedi Maruthuvam (healthcare at your doorstep)","People with high blood pressure or diabetes, and others needing home care","Women health volunteers visit homes to screen for BP and diabetes (adults over 30) and deliver regular medicines. Home physiotherapy, palliative care and home dialysis are offered to listed patients.","No application. Ask your Women Health Volunteer, or visit your nearest health sub-centre or Primary Health Centre."]},
+{tn:1,s:[1],l:"https://picme.tn.gov.in",
+ta:["டாக்டர் முத்துலட்சுமி ரெட்டி மகப்பேறு நிதியுதவித் திட்டம்","தமிழ்நாட்டின் கர்ப்பிணி மற்றும் பாலூட்டும் தாய்மார்கள் (முதல் இரண்டு பிரசவங்கள்); தற்போதைய தகுதியைச் சரிபார்க்கவும்","ஊட்டச்சத்துக்கும் ஊதிய இழப்புக்கும் ₹18,000 பணஉதவி, தவணைகளில் வழங்கப்படும்.","கிராம சுகாதாரச் செவிலியர் மூலம் PICME தளத்தில் கர்ப்பத்தைப் பதிவு செய்யுங்கள்; தாயின் RCH எண் தேவை."],
+en:["Dr Muthulakshmi Reddy Maternity Benefit Scheme","Pregnant and lactating women of Tamil Nadu (first two deliveries); check current eligibility","Cash assistance of ₹18,000, paid in instalments, for nutrition and loss of wages.","Register the pregnancy on the PICME portal through your Village Health Nurse; the mother’s RCH ID is needed."]},
+{ai:1,s:[1],l:null,
+ta:["பிரதமர் மாத்ரு வந்தனா யோஜனா (மகப்பேறு பணஉதவி)","கர்ப்பிணி மற்றும் பாலூட்டும் தாய்மார்கள்; தொகை, விதிகளை மத்திய அரசு தீர்மானிக்கிறது","கர்ப்ப காலத்திலும் பிரசவத்துக்குப் பின்னும் ஊட்டச்சத்துக்கான பணஉதவி.","அங்கன்வாடிப் பணியாளர், ANM அல்லது அருகிலுள்ள சுகாதார நிலையத்தில் பதிவு செய்யச் சொல்லுங்கள்."],
+en:["PM Matru Vandana Yojana (maternity cash benefit)","Pregnant and lactating women; amounts and rules are set by the central government","Cash support for nutrition during pregnancy and after childbirth.","Ask your Anganwadi worker, ANM or nearest health centre to register you."]},
+{s:[1,2,3,5],l:null,
+ta:["108 இலவச அவசர ஊர்தி","மருத்துவ அவசரத்தில் உள்ள எவரும்","விபத்து, பிரசவ அவசரம், மாரடைப்பு, பக்கவாதம் போன்ற அவசரங்களுக்கு 108 ஐ அழைத்தால் இலவச ஆம்புலன்ஸ் வரும். பெரும்பாலான மாநிலங்களில் கிடைக்கும்.","108 ஐ அழைத்து இடத்தையும் பிரச்சினையையும் சொல்லுங்கள்."],
+en:["108 free emergency ambulance","Anyone in a medical emergency","Call 108 for a free ambulance for accidents, pregnancy emergencies, heart attack, stroke and other emergencies. Available in most states.","Dial 108 and give the place and the problem."]}];
+var st={lang:"ta",reg:0,sit:0,inc:2};
+try{var s=localStorage.getItem("hs-lang");if(s==="en"||s==="ta")st.lang=s}catch(e){}
+function $(i){return document.getElementById(i)}
+function chips(id,name,labels,cur){return labels.map(function(t,i){return '<input type="radio" name="'+name+'" id="'+name+i+'" value="'+i+'"'+(i===cur?' checked':'')+'><label for="'+name+i+'">'+t+'</label>'}).join("")}
+function render(){var t=T[st.lang];document.documentElement.lang=st.lang;
+$("sos").innerHTML=t.sos;$("mark").textContent=t.mark;$("h1").textContent=t.h1;$("sub").textContent=t.sub;$("foot").innerHTML=t.foot;
+$("l1").textContent=t.l1;$("l2").textContent=t.l2;$("l3").textContent=t.l3;
+$("c1").innerHTML=chips("c1","reg",t.reg,st.reg);$("c2").innerHTML=chips("c2","sit",t.sit,st.sit);$("c3").innerHTML=chips("c3","inc",t.inc,st.inc);
+$("bta").setAttribute("aria-pressed",st.lang==="ta");$("ben").setAttribute("aria-pressed",st.lang==="en");
+var tn=st.reg===0;
+var r=P.filter(function(p){return (tn?!p.ai:!p.tn)&&p.s.indexOf(st.sit)>-1&&!(p.inc&&st.inc===1&&!(p.dis&&st.sit===4))});
+r.sort(function(a,b){return tn?(b.tn||0)-(a.tn||0):0});
+$("count").textContent=r.length?t.cnt(r.length):"";
+$("list").innerHTML=r.length?r.map(function(p){var c=p[st.lang];
+return '<article class="card">'+(p.tn?'<span class="badge">'+t.tn+'</span>':'')+'<h2>'+c[0]+'</h2><p class="who">'+t.who+c[1]+'</p><p>'+c[2]+'</p><p class="how">'+c[3]+'</p>'+(p.l?'<a class="go" href="'+p.l+'" target="_blank" rel="noopener">'+t.go+'</a>':'')+'</article>'}).join(""):'<div class="empty">'+t.empty+'</div>'}
+document.addEventListener("change",function(e){var n=e.target.name;if(n==="reg")st.reg=+e.target.value;else if(n==="sit")st.sit=+e.target.value;else if(n==="inc")st.inc=+e.target.value;else return;render()});
+function setLang(l){st.lang=l;try{localStorage.setItem("hs-lang",l)}catch(e){}renderAll()}
+$("bta").onclick=function(){setLang("ta")};$("ben").onclick=function(){setLang("en")};
+var X={ta:{tabs:["திட்டங்களைக் கண்டறிய","குடும்ப சுகாதார அட்டை","தடுப்பூசி அட்டவணை"],priv:"இந்த விவரங்கள் இந்தக் கைபேசி அல்லது உலாவியில் மட்டுமே சேமிக்கப்படும்; எங்கும் அனுப்பப்படாது. இந்தக் கைபேசியைப் பயன்படுத்துவோர் இதைப் பார்க்க முடியும்; உலாவித் தரவை அழித்தால் இவையும் அழியும்.",fam:"குடும்ப விவரம்",ec:"அவசரத் தொடர்பு எண்",hos:"விருப்பமான மருத்துவமனை",ins:"காப்பீட்டு அட்டை எண் (CMCHIS / ஆயுஷ்மான்)",mem:"குடும்ப உறுப்பினர்கள்",add:"உறுப்பினரைச் சேர்க்க / திருத்த",edit:"திருத்து",del:"நீக்கு",sure:"உறுதிக்கு மீண்டும் தொடவும்",save:"சேமி",nm:"பெயர்",rl:["நான்","கணவன் / மனைவி","மகன்","மகள்","தந்தை","தாய்","மற்றவர்"],dob:"பிறந்த தேதி",sx:["பெண்","ஆண்","மற்றவர்"],bg:"இரத்த வகை (விருப்பம்)",nt:"நோய்கள், ஒவ்வாமை, மருந்துகள்",none:"இன்னும் உறுப்பினர் இல்லை. முதல் உறுப்பினரைச் சேருங்கள்.",age:"வயது",clr:"சேமித்த எல்லாத் தரவையும் நீக்கு",vt:"தடுப்பூசிகள் (போட்டவுடன் குறிக்கவும்)",due:"போட வேண்டியது அல்லது விடுபட்டது – சுகாதாரப் பணியாளரிடம் கேளுங்கள்",up:"போட வேண்டிய நாள்",dn:"போடப்பட்டது",adult:"இப்போது வழக்கமான குழந்தைத் தடுப்பூசிகள் இல்லை. கர்ப்பிணிகளுக்கு Td தேவை; தடுப்பூசி அட்டவணைப் பக்கத்தைப் பாருங்கள்.",vh:"வயதுவாரி தடுப்பூசி அட்டவணை (அரசு சுகாதார நிலையங்களில் இலவசம்)",vp:"பாதுகாக்கும் நோய்கள்",pg:"கர்ப்பிணிகள்: Td தடுப்பூசி; இரண்டு டோஸ், அல்லது முன்பே போட்டிருந்தால் ஒரு பூஸ்டர்.",vn:"இந்தியாவின் தேசிய அட்டவணையின் அடிப்படையில். மாவட்டத்தைப் பொறுத்து (எ.கா. JE) டோஸ்கள் மாறலாம்; தேதிகளைச் சுகாதாரப் பணியாளர் மாற்றலாம். தாய்–சேய் நல அட்டையை வைத்திருந்து சுகாதார நிலையத்தில் உறுதிசெய்யுங்கள். HPV: 2026 பிப்ரவரியில் தொடங்கிய தேசியத் திட்டத்தில் 14 வயதுப் பெண்களுக்கு ஒரு டோஸ்.",ag:["வ","மா"]},en:{tabs:["Find schemes","Family health card","Vaccination schedule"],priv:"Saved only on this phone or browser; nothing is sent anywhere. Anyone who uses this phone can see it, and clearing browser data deletes it.",fam:"Family details",ec:"Emergency contact number",hos:"Preferred hospital",ins:"Insurance card number (CMCHIS / Ayushman)",mem:"Family members",add:"Add or edit a member",edit:"Edit",del:"Delete",sure:"Tap again to confirm",save:"Save",nm:"Name",rl:["Self","Spouse","Son","Daughter","Father","Mother","Other"],dob:"Date of birth",sx:["Female","Male","Other"],bg:"Blood group (optional)",nt:"Conditions, allergies, medicines",none:"No members yet. Add the first one.",age:"Age",clr:"Delete all saved data",vt:"Vaccines (tick when given)",due:"Due now or missed: ask your health worker",up:"Due from",dn:"Given",adult:"No routine childhood vaccines now. Pregnant women need Td; see the Vaccination schedule tab.",vh:"Age-wise vaccination schedule (free at government health centres)",vp:"Protects against",pg:"Pregnant women: Td vaccine, two doses, or one booster if vaccinated before.",vn:"Based on India’s national schedule. Doses can vary by district (for example JE) and your health worker may adjust dates. Keep your Mother-Child Protection card and confirm at your health centre. HPV: one dose for girls aged 14 under the national programme launched in February 2026.",ag:["y","m"]}};
+var BG=["–","A+","A-","B+","B-","AB+","AB-","O+","O-"],tab=0,editing=null,C={f:{},m:[]};
+try{var q=JSON.parse(localStorage.getItem("hs-card")||"null");if(q&&q.m)C=q}catch(e){}
+function sv(){try{localStorage.setItem("hs-card",JSON.stringify(C))}catch(e){}}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+var V=[{k:"b",o:[0,0],v:"BCG, OPV-0, Hepatitis B",a:["பிறப்பு","Birth"],p:["காசநோய், போலியோ, ஹெபடைடிஸ் பி","TB, polio, hepatitis B"]},
+{k:"w6",o:[0,42],v:"OPV-1, Pentavalent-1, Rotavirus-1, fIPV-1, PCV-1",a:["6 வாரம்","6 weeks"],p:["போலியோ, டிப்தீரியா, கக்குவான் இருமல், டெட்டனஸ், ஹெபடைடிஸ் பி, ஹிப், ரோட்டா வயிற்றுப்போக்கு, நிமோனியா","Polio, diphtheria, whooping cough, tetanus, hepatitis B, Hib, rotavirus diarrhoea, pneumonia"]},
+{k:"w10",o:[0,70],v:"OPV-2, Pentavalent-2, Rotavirus-2",a:["10 வாரம்","10 weeks"],p:["போலியோ, டிப்தீரியா, கக்குவான் இருமல், டெட்டனஸ், ஹெபடைடிஸ் பி, ஹிப், ரோட்டா வயிற்றுப்போக்கு","Polio, diphtheria, whooping cough, tetanus, hepatitis B, Hib, rotavirus diarrhoea"]},
+{k:"w14",o:[0,98],v:"OPV-3, Pentavalent-3, Rotavirus-3, fIPV-2, PCV-2",a:["14 வாரம்","14 weeks"],p:["போலியோ, டிப்தீரியா, கக்குவான் இருமல், டெட்டனஸ், ஹெபடைடிஸ் பி, ஹிப், ரோட்டா வயிற்றுப்போக்கு, நிமோனியா","Polio, diphtheria, whooping cough, tetanus, hepatitis B, Hib, rotavirus diarrhoea, pneumonia"]},
+{k:"m9",o:[9,0],v:"MR-1, PCV booster, Vitamin A, JE-1 (JE districts)",a:["9–12 மாதம்","9–12 months"],p:["தட்டம்மை, ரூபெல்லா, நிமோனியா, வைட்டமின் ஏ குறைபாடு, ஜப்பானிய மூளைக்காய்ச்சல்","Measles, rubella, pneumonia, vitamin A deficiency, Japanese encephalitis"]},
+{k:"m16",o:[16,0],v:"MR-2, DPT booster-1, OPV booster, JE-2 (JE districts)",a:["16–24 மாதம்","16–24 months"],p:["தட்டம்மை, ரூபெல்லா, டிப்தீரியா, கக்குவான் இருமல், டெட்டனஸ், போலியோ, ஜப்பானிய மூளைக்காய்ச்சல்","Measles, rubella, diphtheria, whooping cough, tetanus, polio, Japanese encephalitis"]},
+{k:"y5",o:[60,0],v:"DPT booster-2",a:["5–6 வயது","5–6 years"],p:["டிப்தீரியா, கக்குவான் இருமல், டெட்டனஸ்","Diphtheria, whooping cough, tetanus"]},
+{k:"y10",o:[120,0],v:"Td",a:["10 வயது","10 years"],p:["டெட்டனஸ், டிப்தீரியா","Tetanus, diphtheria"]},
+{k:"y14",o:[168,0],g:1,v:"HPV (1 dose)",a:["14 வயது (பெண்கள்)","14 years (girls)"],p:["கருப்பை வாய்ப் புற்றுநோய் (HPV)","Cervical cancer (HPV)"]},
+{k:"y16",o:[192,0],v:"Td",a:["16 வயது","16 years"],p:["டெட்டனஸ், டிப்தீரியா","Tetanus, diphtheria"]}];
+function ad(d,mo,dy){return new Date(d.getFullYear(),d.getMonth()+mo,d.getDate()+dy)}
+function fd(d){return d.toLocaleDateString(st.lang==="ta"?"ta-IN":"en-IN",{day:"numeric",month:"short",year:"numeric"})}
+function ageM(d){var n=new Date();return Math.max(0,(n.getFullYear()-d.getFullYear())*12+n.getMonth()-d.getMonth()-(n.getDate()<d.getDate()?1:0))}
+function agestr(am,x){return am>=24?Math.floor(am/12)+" "+x.ag[0]+(am%12?" "+am%12+" "+x.ag[1]:""):am+" "+x.ag[1]}
+function tracker(m,x){var d=new Date(m.d),i=st.lang==="ta"?0:1;if(isNaN(d))return"";if(ageM(d)>=204)return'<p class="how">'+x.adult+'</p>';var now=new Date();
+return'<p class="how">'+x.vt+'</p><ul class="vx">'+V.filter(function(r){return!r.g||m.s===0}).map(function(r){var on=m.v&&m.v[r.k],due=ad(d,r.o[0],r.o[1]);
+return'<li><input type="checkbox" data-v="'+m.id+'|'+r.k+'"'+(on?' checked':'')+' aria-label="'+r.a[i]+'"><span><b>'+r.a[i]+'</b>: '+r.v+'<br>'+(on?x.dn:due<=now?'<span class="due">'+x.due+'</span>':x.up+' '+fd(due))+'</span></li>'}).join("")+'</ul>'}
+function renderCard(){var x=X[st.lang],f=C.f,e=C.m.filter(function(m){return m.id===editing})[0]||{};
+var op=function(a,v){return a.map(function(t,i){return'<option value="'+i+'"'+(+v===i?' selected':'')+'>'+t+'</option>'}).join("")};
+$("v-card").innerHTML='<p class="note">'+x.priv+'</p><h2 class="sec">'+x.fam+'</h2><div class="grid">'+[["ec",x.ec],["hos",x.hos],["ins",x.ins]].map(function(p){return'<label class="f">'+p[1]+'<input data-f="'+p[0]+'" value="'+esc(f[p[0]])+'"></label>'}).join("")+'</div><h2 class="sec">'+x.mem+'</h2><div class="list">'+(C.m.length?C.m.map(function(m){var d=new Date(m.d),ok=m.d&&!isNaN(d);
+return'<article class="card"><h2>'+esc(m.n)+'</h2><p class="who">'+x.rl[m.r]+(ok?' · '+x.age+' '+agestr(ageM(d),x):'')+(m.b?' · '+BG[m.b]:'')+'</p>'+(m.t?'<p>'+esc(m.t)+'</p>':'')+(ok?tracker(m,x):'')+'<button class="btn alt" data-act="edit" data-id="'+m.id+'">'+x.edit+'</button> <button class="btn alt" data-act="del" data-id="'+m.id+'">'+x.del+'</button></article>'}).join(""):'<div class="empty">'+x.none+'</div>')+'</div><div class="picker" style="margin-top:16px"><h2>'+x.add+'</h2><div class="grid"><label class="f">'+x.nm+'<input id="m-n" value="'+esc(e.n)+'"></label><label class="f">'+x.rl[0]+' / '+x.rl[6]+'<select id="m-r">'+op(x.rl,e.r||0)+'</select></label><label class="f">'+x.dob+'<input id="m-d" type="date" value="'+esc(e.d)+'"></label><label class="f">'+x.sx.join(" / ")+'<select id="m-s">'+op(x.sx,e.s||0)+'</select></label><label class="f">'+x.bg+'<select id="m-b">'+op(BG,e.b||0)+'</select></label><label class="f">'+x.nt+'<input id="m-t" value="'+esc(e.t)+'"></label></div><p><button class="btn" data-act="save">'+x.save+'</button></p></div><p><button class="btn alt" data-act="clr">'+x.clr+'</button></p>'}
+$("v-card").addEventListener("click",function(ev){var b=ev.target.closest("button");if(!b)return;var a=b.dataset.act,id=b.dataset.id;
+if(a==="save"){var n=$("m-n").value.trim();if(!n){$("m-n").focus();return}var o={id:editing||Date.now().toString(36),n:n,r:+$("m-r").value,d:$("m-d").value,s:+$("m-s").value,b:+$("m-b").value,t:$("m-t").value.trim(),v:{}},i=C.m.findIndex(function(m){return m.id===o.id});if(i>-1){o.v=C.m[i].v||{};C.m[i]=o}else C.m.push(o);editing=null;sv();renderCard()}
+else if(a==="edit"){editing=id;renderCard();$("m-n").focus()}
+else if(a==="del"||a==="clr"){if(!b.dataset.sure){b.dataset.sure=1;b.textContent=X[st.lang].sure;return}if(a==="del")C.m=C.m.filter(function(m){return m.id!==id});else C={f:{},m:[]};editing=null;sv();renderCard()}});
+$("v-card").addEventListener("change",function(ev){var t=ev.target;if(t.dataset.f){C.f[t.dataset.f]=t.value;sv()}else if(t.dataset.v){var p=t.dataset.v.split("|"),m=C.m.filter(function(m){return m.id===p[0]})[0];if(m){m.v=m.v||{};if(t.checked)m.v[p[1]]=1;else delete m.v[p[1]];sv();renderCard()}}});
+function renderVax(){var x=X[st.lang],i=st.lang==="ta"?0:1;$("v-vax").innerHTML='<h2 class="sec">'+x.vh+'</h2><div class="list">'+V.map(function(r){return'<article class="card"><h2>'+r.a[i]+'</h2><p class="who">'+r.v+'</p><p class="how">'+x.vp+': '+r.p[i]+'</p></article>'}).join("")+'</div><p class="note">'+x.pg+'</p><p class="how">'+x.vn+'</p>'}
+function renderAll(){var x=X[st.lang];render();$("tabs").innerHTML=x.tabs.map(function(t,i){return'<button data-t="'+i+'" aria-selected="'+(tab===i)+'">'+t+'</button>'}).join("");["v-find","v-card","v-vax"].forEach(function(id,i){$(id).hidden=tab!==i});renderCard();renderVax()}
+$("tabs").addEventListener("click",function(e){var b=e.target.closest("button");if(b){tab=+b.dataset.t;renderAll()}});
+renderAll();
+</script>
+</body>
+</html>
